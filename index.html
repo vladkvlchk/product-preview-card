@@ -19,6 +19,7 @@
 
       * {
         --color-primary-dark-cyan: hsl(158, 36%, 37%);
+        --color-primary-very-dark-cyan: hsl(158, 35%, 20%);
         --color-primary-cream: hsl(30, 38%, 92%);
 
         --color-very-dark-blue: hsl(212, 21%, 14%);
@@ -111,6 +112,11 @@
         align-items: center;
         justify-content: center;
         gap: 12px;
+        cursor: pointer;
+      }
+
+      .component__add-btn:active {
+        background-color: var(--color-primary-very-dark-cyan);
       }
 
       .component__add-btn__name {
