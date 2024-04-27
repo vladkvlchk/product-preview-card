@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Product preview card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        --color-primary-dark-cyan: hsl(158, 36%, 37%);
+        --color-primary-cream: hsl(30, 38%, 92%);
+
+        --color-very-dark-blue: hsl(212, 21%, 14%);
+        --color-dark-grayish-blue: hsl(228, 12%, 48%);
+        --color-white: hsl(0, 0%, 100%);
+      }
+
+      h1 {
+        color: var(--color-very-dark-blue);
+        font-family: "Fraunces";
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 33px;
+      }
+
+      h2 {
+        color: var(--color-primary-dark-cyan);
+        font-family: "Fraunces";
+        font-size: 32px;
+      }
+
+      h3 {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 5px;
+      }
+
+      p {
+        line-height: 22px;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: var(--color-primary-cream);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--color-dark-grayish-blue);
+        font-family: "Montserrat";
+      }
+
+      .component {
+        background-color: var(--color-white);
+        width: 600px;
+        height: 450px;
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .component__picture {
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .component__image {
+        height: 100%;
+        width: 100%;
+      }
+
+      .component__info {
+        width: 50%;
+        padding: 20px 32px;
+        box-sizing: border-box;
+      }
+
+      .component__price {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .component__old-price {
+        text-decoration: line-through;
+      }
+
+      .component__add-btn {
+        background-color: var(--color-primary-dark-cyan);
+        width: 100%;
+        padding: 16px;
+        border: 0;
+        border-radius: 8px;
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .component__add-btn__name {
+        opacity: 0.9;
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 620px) {
+        .component {
+          flex-direction: column;
+          height: min-content;
+          margin: 20px;
+        }
+
+        .component__picture {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .component__image {
+          height: auto;
+        }
+
+        .component__info {
+          width: 100%;
+          height: 60%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="component">
+      <picture class="component__picture">
+        <img
+          class="component__image"
+          src="./images/image-product-desktop.jpg"
+          alt="parfume"
+        />
+      </picture>
+      <div class="component__info">
+        <h3>Perfume</h3>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="component__price">
+          <h2>$149.99</h2>
+          <p class="component__old-price">$169.99</p>
+        </div>
+        <button class="component__add-btn">
+          <img src="./images/icon-cart.svg" alt="cart" />
+          <span class="component__add-btn__name">
+            <b>Add to Cart</b>
+          </span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
